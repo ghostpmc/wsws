@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow glow-1"></div>
+    
+    <nav>
+        <a href="index.html" class="logo"><i class="fas fa-arrow-left"></i> Назад в портфолио</a>
+        <h2 style="font-size: 18px; color: var(--accent);">Панель администратора</h2>
+    </nav>
+
+    <main class="container" style="padding-top: 120px;">
+        <div class="admin-header" data-aos>
+            <h1>Управление проектами</h1>
+        </div>
+
+        <!-- Add Project Form -->
+        <div class="admin-card" data-aos>
+            <h2 style="margin-bottom: 25px;">Добавить новый проект</h2>
+            <form id="add-project-form" class="contact-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px;">Название проекта</label>
+                        <input type="text" id="proj-title" placeholder="Напр: Crypto Dashboard" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px;">Категория / Тег</label>
+                        <input type="text" id="proj-tag" placeholder="Напр: Web App" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px;">Описание проекта</label>
+                    <textarea id="proj-desc" placeholder="Краткое описание проекта..." rows="3" required></textarea>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px;">Иконка (FontAwesome класс)</label>
+                        <input type="text" id="proj-icon" placeholder="Напр: fas fa-code" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px;">Изображение (URL или Файл)</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" id="proj-image" placeholder="URL изображения" style="flex: 2;">
+                            <label for="proj-image-file" class="btn btn-secondary" style="flex: 1; padding: 10px; font-size: 12px; margin: 0; display: flex; justify-content: center;">
+                                <i class="fas fa-upload"></i> Файл
+                            </label>
+                            <input type="file" id="proj-image-file" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label style="display: block; margin-bottom: 8px; font-size: 14px;">Ссылка на проект</label>
+                    <input type="url" id="proj-link" placeholder="https://..." required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">
+                    Добавить проект <i class="fas fa-plus"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Projects List -->
+        <div class="admin-card" data-aos>
+            <h2 style="margin-bottom: 25px;">Список текущих проектов</h2>
+            <div style="overflow-x: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Тег</th>
+                            <th>Иконка</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-projects-list">
+                        <!-- Projects row will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

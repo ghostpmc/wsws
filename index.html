@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urinov Avazbek | Frontend Developer</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <nav>
+        <a href="#" class="logo">
+            <div class="logo-box">UA</div>
+            Urinov<span class="hl">.dev</span>
+        </a>
+        <div class="nav-links">
+            <a href="#home" class="active">Главная</a>
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#design">Дизайн</a>
+            <a href="#contact">Контакты</a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" style="display: none;">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="badge" data-aos>Available for Hire</div>
+                <h1 data-aos>Hello, I'm <span class="gradient-text">Avazbek</span></h1>
+                <p data-aos>Frontend developer and UI/UX designer. I create aesthetic and high-performance web interfaces with attention to every detail.</p>
+                <div class="btn-group" data-aos>
+                    <a href="#contact" class="btn btn-primary">
+                        Contact Me <i class="fas fa-paper-plane"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        View Projects <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos>
+                <div class="hero-image-container">
+                    <img src="photo_2026-02-17_23-05-18.jpg" alt="Urinov Avazbek">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title" data-aos>Мой стек технологий</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos>
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card" data-aos>
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card" data-aos>
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5 / CSS3</h3>
+                </div>
+                <div class="skill-card" data-aos>
+                    <i class="fab fa-figma"></i>
+                    <h3>UI/UX Design</h3>
+                </div>
+                <div class="skill-card" data-aos>
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card" data-aos>
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git / GitHub</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title" data-aos>Избранные проекты</h2>
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be loaded here via JS -->
+            </div>
+        </section>
+
+        <!-- Design Section -->
+        <section id="design">
+            <h2 class="section-title" data-aos>Дизайн Портфолио</h2>
+            <div class="projects-grid" id="design-container">
+                <!-- Design items will be loaded here via JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-container" data-aos>
+                <div class="contact-info">
+                    <h2>Давайте обсудим ваш проект</h2>
+                    <p>Я всегда открыт для новых идей и интересных вызовов. Напишите мне, и мы создадим что-то крутое вместе.</p>
+                    <div class="contact-methods">
+                        <div class="method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>Email</span>
+                                <p>example@email.com</p>
+                            </div>
+                        </div>
+                        <div class="method">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <span>Telegram</span>
+                                <p>@urinov_dev</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Urinov Avazbek. All rights reserved.</p>
+            <div style="margin-top: 10px;">
+                <a href="admin.html" style="color: var(--text-secondary); text-decoration: none; font-size: 12px; opacity: 0.5;">Admin Panel</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
